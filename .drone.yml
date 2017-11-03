@@ -1,9 +1,12 @@
-pipeline:
+clone:
+  default:
+    image: alpine
+    commands:
+      - echo $DRONE_REPO_PRIVATE
+      - cat /root/.netrc
+
+pipeine:
   build:
-    image: ruby
-    environment:
-      - FASTLANE_VERSION=2.12.0
-    commands: gem install fastlane:$FASTLANE_VERSION -NV
-  test:
-    image: ruby
-    commands: fastlane android test
+    image: alpine
+    commands:
+      - echo hello
