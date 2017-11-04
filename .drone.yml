@@ -10,3 +10,6 @@ pipeine:
     image: alpine
     commands:
       - echo hello
+    test:
+      image: alpine
+      commands: echo $DRONE_SECRET
